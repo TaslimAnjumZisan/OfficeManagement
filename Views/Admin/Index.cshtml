@@ -6,3 +6,9 @@
 
 <h2>Adimn Dashboard</h2>
 
+@if (ViewBag.Test != null)
+{
+    <p class="alert alert-danger text-center">
+        @ViewBag.Test;
+    </p>
+}

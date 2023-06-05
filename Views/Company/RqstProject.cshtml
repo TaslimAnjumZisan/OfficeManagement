@@ -1,0 +1,35 @@
+﻿
+@{
+    ViewBag.Title = "RqstProject";
+    Layout = "~/Views/Shared/CompanyLayout.cshtml";
+}
+
+<h2>RqstProject</h2>
+
+
+<form  method="post">
+    
+
+    <div class="mb-3">
+        <label for="ProjectName" class="form-label">Project Name:</label>
+        <input type="text" class="form-control" id="ProjectName" name="ProjectName" required>
+    </div>
+
+    <div class="mb-3">
+        <label for="Time" class="form-label">Time:</label>
+        <input type="datetime-local" class="form-control" id="Time" name="Time" required>
+    </div>
+
+    <div class="mb-3">
+        <label for="Description" class="form-label">Description:</label>
+        <textarea class="form-control" id="Description" name="Description" required></textarea>
+    </div>
+
+    <div class="mb-3">
+        <label for="Budget" class="form-label">Budget:</label>
+        <input type="number" step="0.01" class="form-control" id="Budget" name="Budget" required>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+

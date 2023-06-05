@@ -21,40 +21,44 @@
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
 
+                        <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                        <li>@Html.ActionLink("About", "About", "Home")</li>
+                        <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                        <li>@Html.ActionLink("Login", "Login", "Home")</li>
+                        <li>@Html.ActionLink("Signup", "Signup", "Company") </li>
 
+       @*@if (Session["user"] == null && Session["admin"] == null && Session["emp"] == null)
+        {
+            <a class="navbar navbar-brand" href="/Admin/Login">Login</a>
+            <a class="navbar navbar-brand" href="/Restaurant/resReg">Restaurent Reg</a>
+        }
+        @if (Session["user"] != null)
+        {
+            <a class="navbar navbar-brand" href="/">Home</a>
+            <a class="navbar navbar-brand" href="/CollectRequest/CreateRequest">Donate Food</a>
+            <a class="navbar navbar-brand" href="/CollectRequest/AllRequests">All Collect Request</a>
+            <a class="navbar navbar-brand" href="/Restaurant/Logout">Logout</a>
 
-                        @if (Session["user"] == null && Session["admin"] == null && Session["emp"] == null)
-                        {
-                            <a class="navbar navbar-brand" href="/Admin/Login">Login</a>
-                            <a class="navbar navbar-brand" href="/Restaurant/resReg">Restaurent Reg</a>
-                        }
-                        @if (Session["user"] != null)
-                        {
-                            <a class="navbar navbar-brand" href="/">Home</a>
-                            <a class="navbar navbar-brand" href="/CollectRequest/CreateRequest">Donate Food</a>
-                            <a class="navbar navbar-brand" href="/CollectRequest/AllRequests">All Collect Request</a>
-                            <a class="navbar navbar-brand" href="/Restaurant/Logout">Logout</a>
+        }
+        @if (Session["admin"] != null)
+        {
+            <a class="navbar navbar-brand" href="/CollectRequest/AllRequests">All Collect Request</a>
+            <a class="navbar navbar-brand" href="/Employee/EmpReg">Add Employee</a>
+            <a class="navbar navbar-brand" href="/Restaurant/ShowAceptedRequest">Accepted Request</a>
+            <a class="navbar navbar-brand" href="/Employee/ShowRequest">Assign Request</a>
+            <a class="navbar navbar-brand" href="/Employee/EmployeeList">Employee List</a>
+            <a class="navbar navbar-brand" href="/Restaurant/RestaurentList">Restaurent List</a>
+            <a class="navbar navbar-brand" href="/Restaurant/Logout">Logout</a>
 
-                        }
-                        @if (Session["admin"] != null)
-                        {
-                            <a class="navbar navbar-brand" href="/CollectRequest/AllRequests">All Collect Request</a>
-                            <a class="navbar navbar-brand" href="/Employee/EmpReg">Add Employee</a>
-                            <a class="navbar navbar-brand" href="/Restaurant/ShowAceptedRequest">Accepted Request</a>
-                            <a class="navbar navbar-brand" href="/Employee/ShowRequest">Assign Request</a>
-                            <a class="navbar navbar-brand" href="/Employee/EmployeeList">Employee List</a>
-                            <a class="navbar navbar-brand" href="/Restaurant/RestaurentList">Restaurent List</a>
-                            <a class="navbar navbar-brand" href="/Restaurant/Logout">Logout</a>
+        }
 
-                        }
+        @if (Session["emp"] != null)
+        {
 
-                        @if (Session["emp"] != null)
-                        {
-
-                            <a class="navbar navbar-brand" href="/Employee/ShowRequest">Assign Request</a>
-                            <a class="navbar navbar-brand" href="/Employee/ShowCompleteRequest">Completed Request</a>
-                            <a class="navbar navbar-brand" href="/Restaurant/Logout">Logout</a>
-                        }
+            <a class="navbar navbar-brand" href="/Employee/ShowRequest">Assign Request</a>
+            <a class="navbar navbar-brand" href="/Employee/ShowCompleteRequest">Completed Request</a>
+            <a class="navbar navbar-brand" href="/Restaurant/Logout">Logout</a>
+        }*@
                     </ul>
                 </div>
         </div>

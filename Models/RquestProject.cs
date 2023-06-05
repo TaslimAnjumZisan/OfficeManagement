@@ -6,20 +6,17 @@ using System.Web;
 
 namespace OfficeManagement.Models
 {
-    public class Admin
+    public class RquestProject
     {
-        [Required]
         public int Id { get; set; }
         [Required]
-        public String Name { get; set;}
+        public string ProjectName { get; set; }
         [Required]
-        public string Address { get; set;}
+        public DateTime Time { get; set; }
         [Required]
-        public string Contact { get; set;}
+        public string Description { get; set; }
         [Required]
-        public string Email { get; set;}
-        [Required]
-        public string Password { get; set;}
+        public float Budget { get; set; }
 
     }
 }

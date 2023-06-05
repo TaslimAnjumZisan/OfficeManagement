@@ -1,0 +1,23 @@
+﻿
+@{
+    ViewBag.Title = "Update or Delete Employee";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<h2>Update or Delete Employee</h2>
+
+
+<form method="post">
+    Name: <input type="text" name="Name" placeholder="Name" class="form-control" value="@Model.Name" />
+    Address: <input type="text" name="Address" placeholder="Address" class="form-control" value="@Model.Address" />
+    Contact: <input type="text" name="Contact" placeholder="Contact" class="form-control" value="@Model.Contact" />
+    Email: <input type="text" name="Email" placeholder="Email" class="form-control" value="@Model.Email" readonly/>
+    Password: <input type="text" name="Password" placeholder="Password" class="form-control" value="@Model.Password" />
+    Salary: <input type="text" name="Salary" placeholder="Salary" class="form-control" value="@Model.Salary" />
+
+    @*<a class="btn btn-success" href="/Admin/UpdateEmployee/@Model.Id">Update</a>
+        <a class="btn btn-success" href="/Admin/DeleteEmployee/@Model.Id">Delete</a>*@
+
+    <input type="submit" value="Update" class="btn btn-success" />
+    <a class="btn btn-danger" href="/Admin/DeleteEmployee/@Model.Id">Delete</a>
+</form>

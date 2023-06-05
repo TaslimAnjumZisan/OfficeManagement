@@ -1,0 +1,30 @@
+﻿
+@{
+    ViewBag.Title = "ShowProject";
+    Layout = "~/Views/Shared/CompanyLayout.cshtml";
+}
+
+<h2>ShowProject</h2>
+
+<table class="table align-middle mb-0 bg-white">
+    <thead class="bg-light">
+        <tr>
+            <th>Id</th>
+            <th>Project Name</th>
+            <th>Estimated Time</th>
+            <th>Description</th>
+            <th>Budget</th>
+        </tr>
+    </thead>
+    @foreach (var comp in Model)
+    {
+        <tr>
+            <td>@comp.Id</td>
+            <td>@comp.ProjectName</td>
+            <td>@comp.Time</td>
+            <td>@comp.Description</td>
+            <td>@comp.Budget</td>
+        </tr>
+    }
+</table>
+

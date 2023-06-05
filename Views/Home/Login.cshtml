@@ -1,7 +1,7 @@
 ﻿
 @{
     ViewBag.Title = "Login";
-    Layout = "~/Views/Shared/AdminLayout.cshtml";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <h2>Login</h2>
@@ -12,8 +12,14 @@
         @TempData["Msg"];
     </p>
 }
+@if (ViewBag.Error != null)
+{
+    <p class="alert alert-danger text-center">
+        @ViewBag.Error;
+    </p>
+}
 <form method="post">
-    Name: <input type="text" name="Name" placeholder="Name" class="form-control" />
+    Email: <input type="text" name="Email" placeholder="Email" class="form-control" />
 
     Password: <input type="text" name="Password" placeholder="Password" class="form-control" />
 

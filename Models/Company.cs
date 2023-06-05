@@ -6,20 +6,19 @@ using System.Web;
 
 namespace OfficeManagement.Models
 {
-    public class Admin
+    public class Company
     {
         [Required]
         public int Id { get; set; }
         [Required]
-        public String Name { get; set;}
+        public String Name { get; set; }
         [Required]
-        public string Address { get; set;}
+        public string Address { get; set; }
         [Required]
-        public string Contact { get; set;}
+        public string Contact { get; set; }
         [Required]
-        public string Email { get; set;}
+        public string Email { get; set; }
         [Required]
-        public string Password { get; set;}
-
+        public string Password { get; set; }
     }
 }

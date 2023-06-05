@@ -1,0 +1,35 @@
+﻿
+@{
+    ViewBag.Title = "ShowEmployee";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<h2>ShowEmployee</h2>
+
+<table class="table align-middle mb-0 bg-white">
+    <thead class="bg-light">
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Address</th>
+            <th>Coltact</th>
+            <th>Email</th>
+            <th>Password</th>
+            <th>Salary</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+        @foreach (var emp in Model)
+        {
+            <tr>
+                <td>@emp.Id</td>
+                <td>@emp.Name</td>
+                <td>@emp.Address</td>
+                <td>@emp.Contact</td>
+                <td>@emp.Email</td>
+                <td>@emp.Password</td>
+                <td>@emp.Salary</td>
+                <td><a class="btn btn-success" href="/Admin/UpDelEmployee/@emp.Id">Edit</a></td>
+            </tr>
+        }
+</table>

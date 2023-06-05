@@ -3,10 +3,10 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - Admin Dashboard</title>
+    <title>@ViewBag.Title - Company Dashboard</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
-    
+
 
 </head>
 <body>
@@ -18,14 +18,12 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Office Managemnt", "Index", "Admin", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("Office Managemnt", "Index", "Comapany", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Add Employee", "AddEmployee", "Admin")</li>
-                    <li>@Html.ActionLink("Show Employee", "ShowEmployee", "Admin")</li>
-                    <li>@Html.ActionLink("Manage Employee", "MangEmp", "Admin")</li>
-                    <li>@Html.ActionLink("Company Request", "CompanyRqst", "Admin")</li>
+                    <li>@Html.ActionLink("Request Project", "RqstProject", "Company")</li>
+                    <li>@Html.ActionLink("Show All Request", "ShowProject", "Company")</li>
                     <li>@Html.ActionLink("Logout", "Logout", "Home")</li>
                 </ul>
             </div>
